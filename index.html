@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07131d">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/site.css">
+  <meta name="description" content="VIQ Backup is an owner-operated desktop workflow using rclone crypt and Google Drive to store encrypted backup files.">
+  <title>Private encrypted backup | VIQ Backup</title>
+</head>
+<body>
+<header class="topbar"><div class="wrap"><a class="brand" href="./index.html" aria-label="VIQ Backup homepage"><span class="brandmark">VB</span><span>VIQ <span class="accent">Backup</span></span></a><nav class="nav" aria-label="Primary"><a href="./index.html" aria-current="page">Overview</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a></nav></div></header>
+<main id="main">
+
+<div class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Independent personal backup utility</span>
+      <h1 id="hero-title">Protect the work.<br><span class="highlight">Keep control.</span></h1>
+      <p class="lead">VIQ Backup is an owner-operated backup workflow for the Vietnam Internet Quality project. It uses <strong>rclone</strong> on the owner's computer to encrypt backup files locally and store the encrypted copies in the owner's Google Drive.</p>
+      <div class="pillrow"><span class="pill">Local encryption</span><span class="pill">Google Drive</span><span class="pill">Limited OAuth scope</span></div>
+      <a class="action primary" href="./privacy.html">How your data is handled <span aria-hidden="true">↗</span></a>
+      <a class="action outline" href="./terms.html">Usage terms</a>
+    </div>
+    <div class="visual" role="img" aria-label="Illustration of three steps: source files, encryption on the local device, encrypted cloud storage">
+      <div class="visual-head"><span>Backup flow</span><span class="signal" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="stage"><span><b>Local source</b><small>Project files and approved backups</small></span><span class="stage-icon" aria-hidden="true">01</span></div>
+      <div class="down" aria-hidden="true">↓</div>
+      <div class="stage"><span><b>rclone crypt</b><small>Content encrypted before upload</small></span><span class="stage-icon" aria-hidden="true">02</span></div>
+      <div class="down" aria-hidden="true">↓</div>
+      <div class="stage"><span><b>Owner's Google Drive</b><small>Encrypted backup objects</small></span><span class="stage-icon" aria-hidden="true">03</span></div>
+      <p class="fine" style="margin-top:20px">This diagram describes the intended workflow, not a guarantee that any particular backup has completed.</p>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="scope-heading">
+    <div class="section-title"><span class="eyebrow">Transparent by design</span><h2 id="scope-heading">What this tool does — and does not do.</h2><p>The public website provides information only. Backup execution and Google authorization take place in the owner's local rclone installation.</p></div>
+    <div class="cards">
+      <article class="card"><div class="card-num">01 / ACCESS</div><h3>Limited Drive permission</h3><p>The desktop workflow requests <code>drive.file</code> access, allowing it to manage files created by or granted to this app, rather than unrestricted access to unrelated Drive content.</p></article>
+      <article class="card"><div class="card-num">02 / PROCESSING</div><h3>Encryption before transfer</h3><p>When the encrypted remote is used, rclone crypt encrypts backup contents and file names locally. Google Drive still processes encrypted object metadata such as sizes and timestamps.</p></article>
+      <article class="card"><div class="card-num">03 / CONTROL</div><h3>No public backup service</h3><p>This is not a hosted file-upload portal. The website offers no login form, does not receive OAuth tokens or backup contents, and does not run backup jobs.</p></article>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0" aria-labelledby="disclosure-heading"><div class="notice"><h3 id="disclosure-heading">Why Google account access is requested</h3><p>Google authorization is used solely by the local rclone Drive connection to create, read, check, and manage backup objects in the authorized Google Drive account. The website itself does not request Google account access. Review the complete <a href="./privacy.html">Privacy Policy</a> before authorizing.</p></div></section>
+</div>
+
+</main>
+<footer class="footer"><div class="wrap footer-grid"><div><a class="brand" href="./index.html"><span class="brandmark">VB</span><span>VIQ Backup</span></a><p class="fine">Independent, owner-operated encrypted backup workflow.<br>Not affiliated with Google or the rclone project.</p></div><div class="footer-links"><a href="./index.html">Home</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms</a></div></div></footer>
+</body>
+</html>

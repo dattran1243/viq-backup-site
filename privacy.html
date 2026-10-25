@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07131d">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/site.css">
+  <meta name="description" content="How VIQ Backup uses the Google Drive OAuth scope, handles encrypted files, and protects local credentials.">
+  <title>Privacy Policy | VIQ Backup</title>
+</head>
+<body>
+<header class="topbar"><div class="wrap"><a class="brand" href="./index.html" aria-label="VIQ Backup homepage"><span class="brandmark">VB</span><span>VIQ <span class="accent">Backup</span></span></a><nav class="nav" aria-label="Primary"><a href="./index.html">Overview</a><a href="./privacy.html" aria-current="page">Privacy</a><a href="./terms.html">Terms</a></nav></div></header>
+<main id="main">
+
+<div class="wrap simple"><div class="subhead"><span class="eyebrow">Privacy &amp; data use</span><h1>Privacy <span class="highlight">Policy</span></h1><p>How the owner-operated VIQ Backup desktop workflow accesses, uses, and retains Google user data.</p><p class="meta">Effective date: October 25, 2026 • Applies to the VIQ Backup Google OAuth client and this information website.</p></div>
+<div class="legal">
+<section><h2>1. Service overview</h2><p>VIQ Backup is a personal, locally operated backup workflow for the Vietnam Internet Quality project. It connects the rclone desktop tool to the operator's Google Drive. This website is a static information site and does not provide a user login, receive backup files, or execute backups.</p></section>
+<section><h2>2. Google information accessed</h2><p>The local rclone configuration requests the Google Drive OAuth scope <code>https://www.googleapis.com/auth/drive.file</code>. Subject to Google's authorization rules, this lets the authorized application create, read, update, verify, and delete files and folders it created or was explicitly granted access to. The workflow does not request the full <code>drive</code> scope or access to Gmail, contacts, or calendars.</p><p>Google OAuth is used to authorize the selected Google account. Access credentials and refresh tokens are handled by rclone locally on the operator's device, not by this website.</p></section>
+<section><h2>3. How information is used</h2><ul><li>Upload encrypted backup files to an authorized Google Drive location.</li><li>List, download, and check files to validate backup integrity and facilitate recovery.</li><li>Manage only backup objects created or deliberately authorized for this application, subject to the configured rclone commands.</li></ul><p>Google user data is not used for advertising, profiling, training models, or unrelated analytics, and is not sold.</p></section>
+<section><h2>4. Encryption and storage</h2><p>When backups are sent through the configured <strong>rclone crypt</strong> remote, their contents and file names are encrypted locally before transfer. The corresponding encrypted files are stored in the operator's own Google Drive account. Google may still process transport and object metadata, such as file sizes and upload times, according to its own policies.</p><p>OAuth configuration, authentication tokens, and encryption secrets remain on the operator's local system unless the operator independently copies or backs them up. Never publish rclone configuration or crypt passwords on a website or in source control.</p></section>
+<section><h2>5. Sharing and third parties</h2><p>The workflow sends encrypted backup objects to Google Drive using Google's API. No additional backup recipient or advertising partner is part of this site. Google independently operates its storage and authorization services under its applicable terms and privacy policy. GitHub Pages or another website host may process technical access logs when serving these pages.</p></section>
+<section><h2>6. Retention and deletion</h2><p>Backup files remain in the operator's Google Drive until the operator deletes them or the storage provider removes them under its policies. Disconnecting OAuth access stops future authorized access but <strong>does not automatically delete existing Drive files</strong>. The operator can delete backup objects from Drive and revoke the app under Google Account &gt; Security &gt; Third-party access. Local logs and copies are managed on the operator's own device.</p></section>
+<section><h2>7. Security and limitations</h2><p>Local encryption is intended to protect backup contents, but security depends on correct use of rclone crypt, safe storage of its keys, device security, and successful restore verification. The operator must protect credentials and maintain a separate recovery copy of the encryption configuration. This website never asks visitors to upload credentials.</p></section>
+<section><h2>8. Website cookies and analytics</h2><p>This static website contains no tracking scripts, advertising pixels, cookies, contact forms, or analytics added by the site publisher. A hosting provider may separately retain standard server logs under its own policies.</p></section>
+<section><h2>9. Changes and questions</h2><p>This notice may be updated when the actual workflow or its use of Google data changes. The latest version will be available at this page. Privacy and data-deletion inquiries: <a href="mailto:dattran112212@gmail.com">dattran112212@gmail.com</a>.</p></section>
+<div class="notice"><p><strong>Google API Services User Data Policy:</strong> Information obtained through Google APIs is used only to provide the backup and recovery functionality described on this page, consistent with applicable limited-use requirements.</p></div>
+</div></div>
+
+</main>
+<footer class="footer"><div class="wrap footer-grid"><div><a class="brand" href="./index.html"><span class="brandmark">VB</span><span>VIQ Backup</span></a><p class="fine">Independent, owner-operated encrypted backup workflow.<br>Not affiliated with Google or the rclone project.</p></div><div class="footer-links"><a href="./index.html">Home</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms</a></div></div></footer>
+</body>
+</html>
